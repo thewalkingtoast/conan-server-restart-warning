@@ -1,0 +1,19 @@
+{
+  "name": "conan-server-restart-warning",
+  "version": "1.0.0",
+  "description": "Assists with sending Discord and in game (via Rcon) warnings about the server restarting soon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:thewalkingtoast/conan-server-restart-warning.git"
+  },
+  "author": "Adam Radabaugh",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0",
+    "shelljs": "^0.8.3"
+  }
+}
