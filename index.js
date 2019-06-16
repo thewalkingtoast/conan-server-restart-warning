@@ -4,12 +4,12 @@ let param = process.argv[2];
 let messageDetails;
 
 if (param !== "now") {
-    messageDetails = param + " minutes.";
+    messageDetails = "in " + param + " minutes.";
 } else {
     messageDetails = param + ".";
 }
 
-let message =  "Server restarts in " + messageDetails;
+let message =  "Server restarts " + messageDetails;
 let discordPayload = { content: message };
 
 request({
