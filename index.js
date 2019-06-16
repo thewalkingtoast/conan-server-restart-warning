@@ -5,7 +5,7 @@ let message =  "Server restarts in " + param + " minutes.";
 let discordPayload = { content: message };
 
 request({
-    url: "https://discordapp.com/api/webhooks/589935785441099792/gaXQ8CQ1cEwcJ2-mx9tAulIxXTgXzeBpIZ9IJLq2tefZEZmdTwZbjK0WZzVdboyXiXXB",
+    url: "",
     method: "POST",
     json: true,
     body: discordPayload
@@ -13,4 +13,8 @@ request({
     console.log("fin");
 });
 
+// Assumes the following are set in the environment
+// MCRCON_HOST
+// MCRCON_PORT
+// MCRCON_PASS
 shell.exec('mcrcon "broadcast ' + message + '"');
