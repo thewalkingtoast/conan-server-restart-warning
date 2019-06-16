@@ -1,7 +1,15 @@
 let shell = require("shelljs");
 let request = require("request");
 let param = process.argv[2];
-let message =  "Server restarts in " + param + " minutes.";
+let messageDetails;
+
+if (param !== "now") {
+    messageDetails = param + " minutes.";
+} else {
+    messageDetails = param + ".";
+}
+
+let message =  "Server restarts in " + messageDetails;
 let discordPayload = { content: message };
 
 request({
